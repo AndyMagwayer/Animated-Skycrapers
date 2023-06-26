@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Playfair', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(450deg, #833434, #064667);
+}
+
+#city {
+    position: relative;
+    transform-style: preserve-3d;
+    animation: animate 10s linear infinite;
+}
+ @keyframes animate{
+    0%{
+        transform: rotate();
+    }
+ }
+#city::before {
+    content: '';
+    position: absolute;
+    width: 400vh;
+    height: 400vh;
+    background: linear-gradient(450deg, #833434, #064667);
+    background: #333;
+    transform: translate(50%, 250px) rotateX(90deg);
+}
